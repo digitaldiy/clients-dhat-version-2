@@ -1,54 +1,53 @@
 <template>
-    <b-navbar>
-        <template slot="brand">
-            <b-navbar-item tag="router-link" :to="{ path: '/' }">
-                <img
-                    src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
-                    alt="Lightweight UI components for Vue.js based on Bulma"
-                >
-            </b-navbar-item>
-        </template>
-        <template slot="start">
-            <b-navbar-item href="#">
-                Home
-            </b-navbar-item>
-            <b-navbar-item href="#">
-                Documentation
-            </b-navbar-item>
-            <b-navbar-dropdown label="Info">
-                <b-navbar-item href="#">
-                    About
-                </b-navbar-item>
-                <b-navbar-item href="#">
-                    Contact
-                </b-navbar-item>
-            </b-navbar-dropdown>
-        </template>
+  <Layout>
+    <div class="container">
+      <Hero />
+      <Nav />
 
-        <template slot="end">
-            <b-navbar-item tag="div">
-                <div class="buttons">
-                    <a class="button is-primary">
-                        <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light">
-                        Log in
-                    </a>
-                </div>
-            </b-navbar-item>
-        </template>
-    </b-navbar>
+      <ProjectsGrid :projects="$page.projects.edges" />
+    </div>
+    <LatestJournals :journals="$page.journals.edges" />
+  </Layout>
 </template>
 
-
+<page-query>
+query Posts {
+	projects: allProjectPost {
+    edges {
+      node {
+        id
+        date (format: "YYYY")
+        title
+        categories
+        thumbnail (quality: 90)
+        path
+      }
+    }
+  },
+  journals: allJournalPost (perPage: 4) {
+    edges {
+      node {
+        id
+        path
+        title
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
-import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
 import Hero from "@/components/Hero"
 import Nav from "@/components/Nav"
 import ProjectsGrid from "@/components/ProjectsGrid"
 import LatestJournals from "@/components/LatestJournals"
 
-
+export default {
+  components: {
+    Hero,
+    Nav,
+    ProjectsGrid,
+    LatestJournals
+  }
+}
 </script>
