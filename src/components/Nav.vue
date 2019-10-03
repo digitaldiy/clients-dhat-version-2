@@ -39,3 +39,16 @@
         </template>
     </b-navbar>
 </template>
+<script>
+import Vue from 'vue'
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
+
+export default {
+  data() {
+    return {
+      settings: require("../../data/theme.json")
+    }
+  }
+}
+<script/>

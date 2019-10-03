@@ -1,7 +1,6 @@
 import DefaultLayout from "~/layouts/Default.vue";
 import settings from "../data/theme.json";
-import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
+
 import "@/assets/code-highlight.css"
 
 export default function(Vue, { head }) {
@@ -9,9 +8,4 @@ export default function(Vue, { head }) {
   head.bodyAttrs = {
     class: settings.dark_mode ? "dark" : ""
   };
-    //Use Buefy.Js library inside our project
-  Object.defineProperty(Vue.prototype, '$Buefy', {
-    value: buefy
-  });
 }
-
