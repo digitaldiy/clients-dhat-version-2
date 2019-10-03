@@ -36,6 +36,8 @@ query Posts {
 </page-query>
 
 <script>
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
 import Hero from "@/components/Hero"
 import Nav from "@/components/Nav"
 import ProjectsGrid from "@/components/ProjectsGrid"

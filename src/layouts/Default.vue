@@ -9,8 +9,6 @@
 <script>
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
 export default {
   components: {
     Header,
