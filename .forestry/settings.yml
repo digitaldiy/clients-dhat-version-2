@@ -6,10 +6,10 @@ webhook_url:
 sections:
 - type: document
   path: data/home.json
-  label: Home
+  label: Home Page
   - type: document
   path: data/about.json
-  label: About
+  label: About Page
 - type: directory
   path: projects
   label: Projects
