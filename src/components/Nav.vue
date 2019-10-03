@@ -1,41 +1,41 @@
 <template>
-  <v-row>
-    <v-col
-      v-for="(bar, i) in bars"
-      :key="i"
-      cols="12"
-      sm="12"
-      md="6"
-      class="my-4"
-    >
-      <v-card color="grey lighten-4" flat height="200px">
-        <v-toolbar :color="bar.class" :dark="bar.dark">
-          <v-app-bar-nav-icon></v-app-bar-nav-icon>
-          <v-toolbar-title>Title</v-toolbar-title>
-          <div class="flex-grow-1"></div>
-          <v-btn icon>
-            <v-icon>mdi-magnify</v-icon>
-          </v-btn>
-          <v-btn icon>
-            <v-icon>mdi-heart</v-icon>
-          </v-btn>
-          <v-btn icon>
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </v-toolbar>
-      </v-card>
-    </v-col>
-  </v-row>
+    <b-navbar>
+        <template slot="brand">
+            <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                <img
+                    src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
+                    alt="Lightweight UI components for Vue.js based on Bulma"
+                >
+            </b-navbar-item>
+        </template>
+        <template slot="start">
+            <b-navbar-item href="#">
+                Home
+            </b-navbar-item>
+            <b-navbar-item href="#">
+                Documentation
+            </b-navbar-item>
+            <b-navbar-dropdown label="Info">
+                <b-navbar-item href="#">
+                    About
+                </b-navbar-item>
+                <b-navbar-item href="#">
+                    Contact
+                </b-navbar-item>
+            </b-navbar-dropdown>
+        </template>
+
+        <template slot="end">
+            <b-navbar-item tag="div">
+                <div class="buttons">
+                    <a class="button is-primary">
+                        <strong>Sign up</strong>
+                    </a>
+                    <a class="button is-light">
+                        Log in
+                    </a>
+                </div>
+            </b-navbar-item>
+        </template>
+    </b-navbar>
 </template>
-<script>
-  export default {
-    data: () => ({
-      bars: [
-        { class: '' },
-        { class: '', dark: true },
-        { class: 'primary', dark: true },
-        { class: 'elevation-0' },
-      ],
-    }),
-  }
-</script>
