@@ -4,12 +4,6 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
-- type: document
-  path: data/home.json
-  label: Home Page
-  - type: document
-  path: data/about.json
-  label: About Page
 - type: directory
   path: projects
   label: Projects
@@ -26,7 +20,7 @@ sections:
   - journal
 - type: document
   path: data/theme.json
-  label: Theme Settings
+  label: Theme config
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
