@@ -26,7 +26,7 @@ sections:
   - journal
 - type: document
   path: data/theme.json
-  label: Theme config
+  label: Theme Settings
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''

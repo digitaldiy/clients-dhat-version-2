@@ -1,4 +1,5 @@
 <template>
+<div>
     <b-navbar>
         <template slot="brand">
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
@@ -38,6 +39,7 @@
             </b-navbar-item>
         </template>
     </b-navbar>
+    <div/>
 </template>
 <script>
 import Vue from 'vue'
