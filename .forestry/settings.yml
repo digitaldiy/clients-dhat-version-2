@@ -4,6 +4,12 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
+- type: document
+  path: data/home.json
+  label: Home
+  - type: document
+  path: data/about.json
+  label: About
 - type: directory
   path: projects
   label: Projects
