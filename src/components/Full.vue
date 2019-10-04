@@ -1,4 +1,4 @@
-
+<template>
 <div>
     <full-page ref="fullpage" :options="options" id="fullpage">
     <div class="section">
@@ -12,7 +12,7 @@
     </div>
   </full-page>
 </div>
-
+</template>
 
 <script>
 
