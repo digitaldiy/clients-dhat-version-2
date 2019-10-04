@@ -1,23 +1,20 @@
 <template>
-<Nav />
-<Home />
-<About />
+<Full />
+
 </template>
 
 
 
 <script>
 
-import Nav from "@/components/Nav"
-import Home from "@/components/Home"
-import About from "@/components/About"
+
+import Full from "@/components/Full"
+
 
 export default {
   components: {
   
-    Nav,
-    Home,
-    About,
+   Full,
 
   }
 }
