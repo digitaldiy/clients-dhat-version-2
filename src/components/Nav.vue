@@ -1,107 +1,92 @@
 <template>
-  <div class="page-container md-layout-column">
-    <md-toolbar class="md-primary">
-      <md-button class="md-icon-button" @click="showNavigation = true">
-        <md-icon>menu</md-icon>
-      </md-button>
-      <span class="md-title">My Title</span>
-
-      <div class="md-toolbar-section-end">
-        <md-button @click="showSidepanel = true">Favorites</md-button>
-      </div>
-    </md-toolbar>
-
-    <md-drawer :md-active.sync="showNavigation" md-swipeable>
-      <md-toolbar class="md-transparent" md-elevation="0">
-        <span class="md-title">My App name</span>
-      </md-toolbar>
-
-      <md-list>
-        <md-list-item>
-          <md-icon>move_to_inbox</md-icon>
-          <span class="md-list-item-text">Inbox</span>
-        </md-list-item>
-
-        <md-list-item>
-          <md-icon>send</md-icon>
-          <span class="md-list-item-text">Sent Mail</span>
-        </md-list-item>
-
-        <md-list-item>
-          <md-icon>delete</md-icon>
-          <span class="md-list-item-text">Trash</span>
-        </md-list-item>
-
-        <md-list-item>
-          <md-icon>error</md-icon>
-          <span class="md-list-item-text">Spam</span>
-        </md-list-item>
-      </md-list>
-    </md-drawer>
-
-    <md-drawer class="md-right" :md-active.sync="showSidepanel">
-      <md-toolbar class="md-transparent" md-elevation="0">
-        <span class="md-title">Favorites</span>
-      </md-toolbar>
-
-      <md-list>
-        <md-list-item>
-          <span class="md-list-item-text">Abbey Christansen</span>
-
-          <md-button class="md-icon-button md-list-action">
-            <md-icon class="md-primary">chat_bubble</md-icon>
-          </md-button>
-        </md-list-item>
-
-        <md-list-item>
-          <span class="md-list-item-text">Alex Nelson</span>
-
-          <md-button class="md-icon-button md-list-action">
-            <md-icon class="md-primary">chat_bubble</md-icon>
-          </md-button>
-        </md-list-item>
-
-        <md-list-item>
-          <span class="md-list-item-text">Mary Johnson</span>
-
-          <md-button class="md-icon-button md-list-action">
-            <md-icon>chat_bubble</md-icon>
-          </md-button>
-        </md-list-item>
-      </md-list>
-    </md-drawer>
-
-    <md-content>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.
-    </md-content>
-  </div>
+    <Slide>
+      <a id="home" href="#">
+        <span>Home</span>
+      </a>
+       <a id="home" href="#">
+        <span>About</span>
+      </a>
+        <a id="home" href="#">
+        <span>Contact</span>
+      </a>
+        <a id="home" href="#">
+        <span>Blog</span>
+      </a>
+    </Slide>
 </template>
 
+
+
 <script>
-  export default {
-    name: 'Temporary',
-    data: () => ({
-      showNavigation: false,
-      showSidepanel: false
-    })
-  }
+import { Slide } from 'vue-burger-menu'  // import the CSS transitions you wish to use, in this case we are using `Slide`
+
+export default {
+    components: {
+        Slide // Register your component
+    }
+}
 </script>
 
-<style lang="scss" scoped>
-  .page-container {
-    min-height: 300px;
-    overflow: hidden;
-    position: relative;
-    border: 1px solid rgba(#000, .12);
-  }
+<style lang="css" scoped>
+.bm-burger-button {
+      position: fixed;
+      width: 36px;
+      height: 30px;
+      left: 36px;
+      top: 36px;
+      cursor: pointer;
+    }
+    .bm-burger-bars {
+      background-color: #373a47;
+    }
+    .line-style {
+      position: absolute;
+      height: 20%;
+      left: 0;
+      right: 0;
+    }
+    .cross-style {
+      position: absolute;
+      top: 12px;
+      right: 2px;
+      cursor: pointer;
+    }
+    .bm-cross {
+      background: #bdc3c7;
+    }
+    .bm-cross-button {
+      height: 24px;
+      width: 24px;
+    }
+    .bm-menu {
+      height: 100%; /* 100% Full-height */
+      width: 0; /* 0 width - change this with JavaScript */
+      position: fixed; /* Stay in place */
+      z-index: 1000; /* Stay on top */
+      top: 0;
+      left: 0;
+      background-color: rgb(63, 63, 65); /* Black*/
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; /* Place content 60px from the top */
+      transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
+    }
 
-   // Demo purposes only
-  .md-drawer {
-    width: 230px;
-    max-width: calc(100vw - 125px);
-  }
-
-  .md-content {
-    padding: 16px;
-  }
+    .bm-overlay {
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .bm-item-list {
+      color: #b8b7ad;
+      margin-left: 10%;
+      font-size: 20px;
+    }
+    .bm-item-list > * {
+      display: flex;
+      text-decoration: none;
+      padding: 0.7em;
+    }
+    .bm-item-list > * > span {
+      margin-left: 10px;
+      font-weight: 700;
+      color: white;
+    }
 </style>
