@@ -1,6 +1,6 @@
 <template>
-<Nav />
-<Home />
+<NavBar />
+
 </template>
 
 
@@ -8,15 +8,14 @@
 <script>
 
 
-import Nav from "@/components/Nav"
-import Home from "@/components/Home"
+import NavBar from "@/components/NavBar"
+
 
 
 export default {
   components: {
   
-   Nav,
-   Home,
+   NavBar,
 
   }
 }
