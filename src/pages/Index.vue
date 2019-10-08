@@ -1,21 +1,27 @@
+
 <template>
-<NavBar />
-
+  <Layout>
+    <div class="container">
+      
+      <About />
+    </div>
+   
+  </Layout>
 </template>
-
-
 
 <script>
 
 
-import NavBar from "@/components/NavBar"
-
-
+import Nav from "@/components/Nav"
+import Home from "@/components/Home"
+import About from "@/components/About"
 
 export default {
   components: {
   
-   NavBar,
+   Nav,
+   Home,
+   About
 
   }
 }

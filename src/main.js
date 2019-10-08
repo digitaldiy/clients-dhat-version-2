@@ -3,11 +3,9 @@ import settings from "../data/theme.json";
 import Vue from 'vue'
 import VueMaterial from 'vue-material'
 
-
-
-
 import "@/assets/code-highlight.css"
 import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default-dark.css' 
 
 Vue.use(VueMaterial)
 

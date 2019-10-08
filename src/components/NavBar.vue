@@ -1,5 +1,5 @@
 <template>
-<Burger />
+
 <Nav />
 
 </template>
@@ -10,7 +10,7 @@
 
 
 import Nav from "@/components/Nav"
-import Burger from "@/components/Burger"
+
 
 
 
@@ -18,7 +18,7 @@ export default {
   components: {
   
    Nav,
-   Burger,
+
 
   }
 }

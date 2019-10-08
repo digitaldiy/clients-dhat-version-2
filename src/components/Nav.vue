@@ -1,21 +1,37 @@
-<template>
+ <template>
+ <div>
+    <md-toolbar class="md-large md-primary">
+      <div class="md-toolbar-row">
+        <div class="md-toolbar-section-start">
+          <md-button class="md-icon-button">
+            <md-icon>menu</md-icon>
+          </md-button>
+        </div>
 
-      <div>
-    <md-tabs>
-      <md-tab id="tab-home" md-label="Home" md-icon="home"></md-tab>
-      <md-tab id="tab-pages" md-label="Pages" md-icon="pages"></md-tab>
-      <md-tab id="tab-posts" md-label="Posts" md-icon="/assets/icon-whatshot.svg"></md-tab>
-      <md-tab id="tab-favorites" md-label="Favorites" md-icon="favorite"></md-tab>
-    </md-tabs>
+        <div class="md-toolbar-section-end">
+          <md-button class="md-icon-button">
+            <md-icon>refresh</md-icon>
+          </md-button>
 
-    <md-tabs class="md-primary" md-alignment="centered">
-      <md-tab id="tab-home" md-icon="home"></md-tab>
-      <md-tab id="tab-pages" md-icon="pages"></md-tab>
-      <md-tab id="tab-posts" md-icon="/assets/icon-whatshot.svg"></md-tab>
-      <md-tab id="tab-favorites" md-icon="favorite"></md-tab>
-    </md-tabs>
+          <md-button class="md-icon-button">
+            <md-icon>more_vert</md-icon>
+          </md-button>
+        </div>
+      </div>
+
+     
+    </md-toolbar>
   </div>
 </template>
 
+<style lang="scss" scoped>
+  .md-toolbar + .md-toolbar {
+    margin-top: 16px;
+  }
+</style>
 
-
+<script>
+export default {
+  name: 'ContentActions'
+}
+</script>
