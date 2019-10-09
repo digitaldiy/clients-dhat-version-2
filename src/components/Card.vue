@@ -1,77 +1,48 @@
 <template>
-  <div class="card-expansion">
-     <md-card md-with-hover>
-      <md-card-media>
-        <img src="/assets/examples/card-image-1.jpg" alt="People">
-      </md-card-media>
+<vs-row vs-justify="center">
+    <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="6">
+      <vs-card actionable class="cardx">
+        <div slot="header">
+          <h3>
+            Hello world !
+          </h3>
+        </div>
+        <div slot="media">
+          <img :src="$withBase('/card.png')">
+        </div>
+        <div>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+        </div>
+        <div slot="footer">
+          <vs-row vs-justify="flex-end">
+            <vs-button color="primary" type="gradient" >View</vs-button>
+            <vs-button color="danger" type="gradient">Delete</vs-button>
+          </vs-row>
+        </div>
+      </vs-card>
+    </vs-col>
+    <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="6">
+      <vs-card actionable class="cardx">
+        <div slot="header">
+          <h3>
+            Hello world !
+          </h3>
+        </div>
+        <div slot="media">
+          <img :src="$withBase('/card2.png')">
+        </div>
+        <div>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+        </div>
+        <div slot="footer">
+          <vs-row vs-justify="flex-end">
+            <vs-button color="primary" type="gradient" >View</vs-button>
+            <vs-button color="danger" type="gradient" >Delete</vs-button>
+          </vs-row>
+        </div>
+      </vs-card>
+    </vs-col>
+  </vs-row>
 
-      <md-card-header>
-        <div class="md-title">Title goes here</div>
-        <div class="md-subhead">Subtitle here</div>
-      </md-card-header>
-
-      <md-card-expand>
-        <md-card-actions md-alignment="space-between">
-          <div>
-            <md-button>Book Now</md-button>
-          </div>
-
-     
-            <md-button  @click="showDialog = true">Learn More</md-button>
-        
-        </md-card-actions>
- </md-card-expand>
-      
-    </md-card >
-     <md-dialog :md-active.sync="showDialog">
-      <md-dialog-title>Preferences</md-dialog-title>
-
-      <md-tabs md-dynamic-height>
-        <md-tab md-label="What Is It">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam mollitia dolorum dolores quae commodi impedit possimus qui, atque at voluptates cupiditate. Neque quae culpa suscipit praesentium inventore ducimus ipsa aut.</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam mollitia dolorum dolores quae commodi impedit possimus qui, atque at voluptates cupiditate. Neque quae culpa suscipit praesentium inventore ducimus ipsa aut.</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam mollitia dolorum dolores quae commodi impedit possimus qui, atque at voluptates cupiditate. Neque quae culpa suscipit praesentium inventore ducimus ipsa aut.</p>
-        </md-tab>
-
-        <md-tab md-label="How Can It Help Me">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam mollitia dolorum dolores quae commodi impedit possimus qui, atque at voluptates cupiditate. Neque quae culpa suscipit praesentium inventore ducimus ipsa aut.</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam mollitia dolorum dolores quae commodi impedit possimus qui, atque at voluptates cupiditate. Neque quae culpa suscipit praesentium inventore ducimus ipsa aut.</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam mollitia dolorum dolores quae commodi impedit possimus qui, atque at voluptates cupiditate. Neque quae culpa suscipit praesentium inventore ducimus ipsa aut.</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam mollitia dolorum dolores quae commodi impedit possimus qui, atque at voluptates cupiditate. Neque quae culpa suscipit praesentium inventore ducimus ipsa aut.</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam mollitia dolorum dolores quae commodi impedit possimus qui, atque at voluptates cupiditate. Neque quae culpa suscipit praesentium inventore ducimus ipsa aut.</p>
-        </md-tab>
-      </md-tabs>
-
-      <md-dialog-actions>
-        <md-button class="md-primary" @click="showDialog = false">Close</md-button>
-        <md-button class="md-primary" @click="showDialog = false">Book Now</md-button>
-      </md-dialog-actions>
-    </md-dialog>
-  </div>
 </template>
-
-<script>
-  export default {
-   
-     name: 'DialogCustom',
-    data: () => ({
-      showDialog: false
-    })
-  }
-</script>
-
-<style lang="scss" scoped>
-  .card-expansion {
-    height: 480px;
-  }
- .md-dialog {
-    max-width: 768px;
-  }
-  .md-card {
-    width: 320px;
-    margin: 4px;
-    display: inline-block;
-    vertical-align: top;
-  }
-</style>
 
